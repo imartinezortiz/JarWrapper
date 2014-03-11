@@ -6,6 +6,14 @@
 # per project ignores, it's cumbersome, but reduces the risk of missing something
 
 # target directories:
-/bin
-/target
-/dist
+bin/
+target/
+
+# IntelliJ project files
+.idea/
+*.iml
+
+# Eclipse project files
+.classpath
+.project
+.settings
