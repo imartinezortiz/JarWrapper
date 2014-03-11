@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import com.esotericsoftware.scar.Build;
+import com.esotericsoftware.scar.Jar;
 import com.esotericsoftware.scar.Project;
 import com.esotericsoftware.scar.Scar;
 import com.esotericsoftware.wildcard.Paths;
@@ -33,7 +34,7 @@ public class JarWrapperBuild {
 		paths(outputPath).delete();
 		
 		String jar = outputPath + "/JarWrapper-"+JarWrapper.version+".jar";
-		Scar.jar(jar, paths(onejar), "com.robotality.jarwrapper.JarWrapper", new Paths());
+		Jar.jar(jar, paths(onejar), "com.robotality.jarwrapper.JarWrapper", new Paths());
 		
 		paths(".", wrapperResources.toArray(new String[0])).copyTo(outputPath);
 		
